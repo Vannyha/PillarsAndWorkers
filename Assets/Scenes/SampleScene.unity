@@ -245,6 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e86f66b04c66e4caa1c3a4917b58c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pillarPrefab: {fileID: 8829639743042092940, guid: 423d1ec7e39fd0849bcd1440869d83a4, type: 3}
+  pillarsPosition:
+  - {x: 0, y: 1, z: 0}
+  - {x: -2, y: 1, z: 0}
+  - {x: 2, y: 1, z: 0}
+  changeTime: 1
 --- !u!4 &739394711
 Transform:
   m_ObjectHideFlags: 0
@@ -253,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739394709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33326244, y: 1.6234627, z: -9.636917}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -441,7 +447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562840688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6319246, y: 4.3259277, z: -17.141308}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -478,11 +484,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workerPrefab: {fileID: 5570989279850563492, guid: 7926babb135662f4483b99277fbc2369, type: 3}
   workersSetup:
-  - StartPosition: {x: 0, y: 1, z: -10}
-    WorkerColors: 0100000002000000
-  - StartPosition: {x: 5, y: 1, z: -10}
-    WorkerColors: 0100000002000000
-  - StartPosition: {x: -5, y: 1, z: -10}
+  - StartPosition: {x: -2.5, y: 1, z: -10}
+    WorkerColors: 0100000003000000
+  - StartPosition: {x: 2.5, y: 1, z: -10}
     WorkerColors: 0100000002000000
 --- !u!4 &1724789626
 Transform:
@@ -492,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724789624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6319246, y: 4.3259277, z: -17.141308}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

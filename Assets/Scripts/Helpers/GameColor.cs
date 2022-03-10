@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
+using UnityEngine;
 
 namespace Helpers
 {
@@ -7,10 +7,10 @@ namespace Helpers
     {
         public static Dictionary<GameColor, Color> GameColorToRGB = new Dictionary<GameColor, Color>
         {
-            {GameColor.None, Color.White},
-            {GameColor.Red, Color.Red},
-            {GameColor.Green, Color.Green},
-            {GameColor.Blue, Color.Blue},
+            {GameColor.None, Color.white},
+            {GameColor.Red, Color.red},
+            {GameColor.Green, Color.green},
+            {GameColor.Blue, Color.blue},
         };
         
         public static Color GetRGBFromGameColor(GameColor color)

@@ -10,7 +10,6 @@ namespace Managers
 {
     public class WorkerManager : MonoBehaviour, IWorkerManager
     {
-        private IPillarManager pillarManager;
         private List<Worker> workers = new List<Worker>();
         
         [SerializeField] private Worker workerPrefab;
@@ -18,7 +17,7 @@ namespace Managers
 
         public void SetupBeans(GameContext context)
         {
-            pillarManager = context.PillarManagerInstance;
+            //
         }
 
         public void PillarFixRequest(Pillar pillar)

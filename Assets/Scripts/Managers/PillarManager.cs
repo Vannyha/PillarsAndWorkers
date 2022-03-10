@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Components;
@@ -35,8 +34,8 @@ namespace Managers
 
             if (changeTime <= (timer += Time.deltaTime))
             {
-                Pillar pillarToFix = pillars.ElementAt(Random.Range(0, pillars.Count - 1));
-                pillarToFix.SetPillarColor((GameColor) Random.Range(1, 3));
+                Pillar pillarToFix = pillars.ElementAt(Random.Range(0, pillars.Count));
+                pillarToFix.SetPillarColor((GameColor) Random.Range(1, 4));
                 workerManager.PillarFixRequest(pillarToFix);
                 timer = 0f;
             }
