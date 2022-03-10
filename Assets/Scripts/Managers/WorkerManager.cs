@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Components;
 using Context;
 using Helpers;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Managers
 {
@@ -22,7 +20,15 @@ namespace Managers
         {
             pillarManager = context.PillarManagerInstance;
         }
-        
+
+        public void PillarFixRequest(Pillar pillar)
+        {
+            //Тут можно ввести проверку если нет подходящих воркеров,
+            //Но условие задачи не подразумевает такой исход
+
+            workers.First(w => !w.InWork && w.AvailableColors.Contains(pillar.CurrentColor)).SetPillarToFix(pillar);
+        }
+
         public void OnEnable()
         {
             foreach (WorkerSetup workerSetup in workersSetup)

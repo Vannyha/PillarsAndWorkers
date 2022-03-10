@@ -7,10 +7,14 @@ namespace Components
 {
     public class Worker : MonoBehaviour
     {
+        private const float FixDistance = 2f;
+        
         private Vector3 startPos = Vector3.zero;
         private Pillar currentPillar;
         private bool inWork = false;
-        private List<GameColor> availableColors;
+        private List<GameColor> availableColors = new List<GameColor>();
+
+        private Transform stashedPillarTransform;
         
         [SerializeField] private NavMeshAgent navMeshAgent;
 
@@ -20,15 +24,28 @@ namespace Components
         public void SetPillarToFix(Pillar pillar)
         {
             currentPillar = pillar;
+            stashedPillarTransform = pillar.transform;
+            navMeshAgent.SetDestination(pillar.gameObject.transform.position);
             inWork = true;
         }
 
         public void ProcessUpdate()
         {
-            if (inWork)
+            if (!inWork)
             {
-                
+                return;
             }
+
+            if (Vector3.Distance(transform.position, stashedPillarTransform.position) > FixDistance)
+            {
+                return;
+            }
+            
+            currentPillar.FixPillar();
+            currentPillar = null;
+            stashedPillarTransform = null;
+            navMeshAgent.SetDestination(startPos);
+            inWork = false;
         }
 
         public void SetStartPos(Vector3 pos)
